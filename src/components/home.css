@@ -1,0 +1,112 @@
+.homepage {
+  margin: 20px;
+}
+
+.header {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+}
+
+.navbar {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-item a:hover {
+  background-color: #f2f2f2;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-user h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.post-user p {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.post p {
+  color: #555;
+  font-size: 16px;
+}
+
+.post-actions {
+  margin-top: 10px;
+}
+
+.like-button,
+.feedback-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.like-button:hover,
+.feedback-button:hover {
+  background-color: #555;
+}
