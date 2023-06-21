@@ -8,20 +8,17 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const users = [
-    { username: 'admin', password: 'password' },
-    { username: 'user1', password: '123456' },
-    { username: 'user2', password: 'abcdef' },
-  ];
+
+  
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    const foundUser = users.find(
-      (user) => user.username === username && user.password === password
-    );
     
-    if (foundUser) {
+    if (username === 'admin' && password === 'password') {
       alert('Login successful!');
+
+      
+
       navigate('/home');
     } else {
       alert('Invalid username or password');
