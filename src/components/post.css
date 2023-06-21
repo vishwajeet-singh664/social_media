@@ -1,49 +1,82 @@
 .post {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .post-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .profile-pic {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .post-user h3 {
-    margin: 0;
-    font-size: 16px;
-  }
-  
-  .post-user p {
-    margin: 0;
-    color: #777;
-    font-size: 12px;
-  }
-  
-  .post p {
-    margin-bottom: 10px;
-  }
-  
-  .post-actions button {
-    background-color: #555;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    margin-right: 10px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .post-actions button:hover {
-    background-color: #333;
-  }
-  
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-user h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.post-user p {
+  margin: 0;
+  color: #777;
+  font-size: 12px;
+}
+
+.post p {
+  margin-bottom: 10px;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+}
+
+.like-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.like-button:focus {
+  outline: none;
+}
+
+.like-button svg {
+  width: 20px;
+  height: 20px;
+  color: #777;
+  transition: color 0.3s ease;
+}
+
+.like-button:hover svg {
+  color: #ff5252;
+}
+
+.like-count {
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.feedback-button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.feedback-button:hover {
+  background-color: #333;
+}
