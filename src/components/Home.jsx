@@ -1,29 +1,50 @@
-import React from 'react';
-import './home.css';
+import React, { useEffect, useState } from 'react';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 import staticData from './staticData';
 import Post from './Post';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbarr from './Navbarr'
+import Chat from './Chat';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import "./home.css"
 
-const Home = () => {
+const Home = ({ newPost }) => {
+  const [data, setData] = useState(staticData);
+
+  useEffect(() => {
+    if (newPost.content.length > 0) setData([...data, newPost]);
+  }, []);
+
+  console.log('data', data, newPost);
+
   return (
-    <div className="homepage">
-      <header className="header">
-        <h1>Welcome to MySocial</h1>
-        <nav className="navbar">
-          <ul className="nav-list">
-            <li className="nav-item"><a href="/">Home</a></li>
-            <li className="nav-item"><a href="/about">About</a></li>
-            <li className="nav-item"><a href="/contact">Contact</a></li>
-            <li className="nav-item"><a href="/newpost">Create Post</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div className="content">
-        <h2>Posts</h2>
-        {staticData.map((post, index) => (
-          <Post key={index} post={post} />
-        ))}
-      </div>
-    </div>
+    <Container fluid className="homepage">
+     <Navbarr/>
+
+<div class="grid">
+  <Row>
+    <Col>
+  <div class="content">
+    <h2 className='post-title'>Posts</h2>
+    {data.map((post, index) => (
+      <Post key={index} post={post} />
+      
+      )
+      )}
+  </div>
+      </Col>
+  <Col>
+  <div class="chat">
+    <Chat />
+  </div>
+  </Col>
+  </Row>
+  
+</div>
+
+     
+    </Container>
   );
 };
 

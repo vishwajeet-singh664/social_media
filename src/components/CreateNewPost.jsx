@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-const CreateNewPost = () => {
+import './createnewpost.css'
+const CreateNewPost = ({newPost, setNewPost}) => {
   const navigate = useNavigate();
-  const [newPost, setNewPost] = useState({
-    content: '',
-  });
+ 
 
   const handleInputChange = (e) => {
     setNewPost({
@@ -16,10 +13,7 @@ const CreateNewPost = () => {
 
   const handleCreatePost = (e) => {
     e.preventDefault();
-    console.log('New Post:', newPost);
-    setNewPost({
-      content: '',
-    });
+
     navigate('/home');
   };
 
@@ -29,7 +23,7 @@ const CreateNewPost = () => {
       <form onSubmit={handleCreatePost}>
         <div className="input-container">
           <label>Content:</label>
-          <textarea name="content" value={newPost.content} onChange={handleInputChange} required></textarea>
+          <textarea name="content" value={newPost?.content} onChange={handleInputChange} required></textarea>
         </div>
         <div className="button-container">
           <button type="submit">Create Post</button>

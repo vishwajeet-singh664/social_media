@@ -69,3 +69,20 @@ input[type='submit'] {
 .register-container a:hover {
   text-decoration: underline;
 }
+
+/* Media Queries for Responsive Styles */
+
+@media screen and (max-width: 480px) {
+  form {
+    width: 90%;
+  }
+  
+  input[type='text'],
+  input[type='password'] {
+    width: 100%;
+  }
+  
+  .button-container {
+    width: 100%;
+  }
+}

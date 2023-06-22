@@ -1,27 +1,34 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-
-import './login.css';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./login.css";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    
-    if (username === 'admin' && password === 'password') {
-      alert('Login successful!');
+  
+    if (username === "admin" && password === "password") {
+      console.log("toast")
+      toast.success("Logged In!", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
 
+      setTimeout(() => {
+        navigate('/home');
+      }, 2000)
       
-
-      navigate('/home');
+     
     } else {
-      alert('Invalid username or password');
+      toast.warning("invalid credentials!!!",{
+        position: toast.POSITION.TOP_RIGHT,
+      });
     }
   };
 
@@ -55,6 +62,19 @@ const Login = () => {
           <Link to="/signup">Sign up</Link>
         </div>
       </form>
+
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };

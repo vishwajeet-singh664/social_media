@@ -12,6 +12,8 @@ form {
   padding: 20px;
   background-color: #f2f2f2;
   border-radius: 5px;
+  max-width: 500px; /* Added maximum width */
+  margin: 0 auto; /* Center align the form */
 }
 
 .input-container {
@@ -68,4 +70,20 @@ input[type='submit'] {
 
 .login-container a:hover {
   text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 90%;
+  }
+
+  .input-container {
+    width: 100%;
+  }
+
+  .button-container {
+    width: 100%;
+  }
 }
